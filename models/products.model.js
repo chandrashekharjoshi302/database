@@ -7,10 +7,13 @@ const productSchema=mongoose.Schema({
     image3:String,
     image4:String,
     oprice:String,
+
+    
+    
+    code:String,
     gender:String,
-    Category:String,
-    dprice:String,
-    code:String
+    category:String,
+    dprice:String
    
 })
 

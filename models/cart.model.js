@@ -1,6 +1,7 @@
 const mongoose=require("mongoose")
 
 const cartSchema=mongoose.Schema({
+    
     title:String,
     image1:String,
     image2:String,
@@ -8,7 +9,7 @@ const cartSchema=mongoose.Schema({
     image4:String,
     oprice:String,
     gender:String,
-    Category:String,
+    category:String,
     dprice:String,
     code:String,
     userID:String
