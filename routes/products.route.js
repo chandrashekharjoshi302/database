@@ -10,7 +10,7 @@ productRouter.get("/get",async(req,res)=>{
         data=await ProductModel.find({$and:[{category:query.category},{gender:query.gender}]})
     }else if(query.gender!==undefined){
         data=await ProductModel.find({gender:query.gender})
-    }else if(query.color!==undefined){
+    }else if(query.category!==undefined){
         data=await ProductModel.find({category:query.category})
     }else{
         data=await ProductModel.find()
