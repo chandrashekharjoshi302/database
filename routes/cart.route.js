@@ -22,7 +22,7 @@ cartRouter.patch("/modify/:id",async(req,res)=>{
     let data=req.body
     let userData=await CartModel.find({_id:id})
     if(userData[0].userID=data.userID){
-        await UserModel.findByIdAndUpdate(id,data)
+        await CartModel.findByIdAndUpdate(id,data)
         res.send("Updated Succesfully")
     }else{
         res.send("You cannot modify the data.")
@@ -33,7 +33,7 @@ cartRouter.delete("/delete/:id",async(req,res)=>{
     let id=req.params.id
     let userData=await CartModel.find({_id:id})
     if(userData[0].userID==req.body.userID){
-        await UserModel.findByIdAndDelete(id)
+        await CartModel.findByIdAndDelete(id)
         res.send("Deleted Succesfully.")
     }else{
         res.send("You can't delete this route.")
